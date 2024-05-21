@@ -9,12 +9,12 @@ You need to point in lnd.conf to the bitcoin node of whoever wants to use it.
 
 Change this part to your bitcoind credentials
 
-# External Bitcoin Node - Please change to your bitcoin node IP, and your RPCUSER and RPCPASS
-bitcoind.rpchost=192.168.68.74:8332
-bitcoind.rpcuser=jvxminibolt
-bitcoind.rpcpass=Suc31709801%%
-bitcoind.zmqpubrawblock=tcp://192.168.68.74:28332
-bitcoind.zmqpubrawtx=tcp://192.168.68.74:28333
+`# External Bitcoin Node - Please change to your bitcoin node IP, and your RPCUSER and RPCPASS`
+`bitcoind.rpchost=192.168.68.74:8332`
+`bitcoind.rpcuser=jvxminibolt`
+`bitcoind.rpcpass=Suc31709801%%`
+`bitcoind.zmqpubrawblock=tcp://192.168.68.74:28332`
+`bitcoind.zmqpubrawtx=tcp://192.168.68.74:28333`
 
 
 Type `journalctl -f -u lnd`

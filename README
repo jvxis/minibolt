@@ -1,0 +1,14 @@
+Guys, I made a light version of minibolt here, without bitcoind. Just with the setup configurations, tor, i2p, and lnd. In this case, I used LND via git pull and compiled it to ensure the latest available version.
+
+It has active services and is right at the point where it asks to create the wallet password. From this step:
+
+https://v2.minibolt.info/lightning/lightning/lightning-client#wallet-setup
+
+The lnd.conf is complete and commented, for now in tor only, since it is not possible to have two clearnets without changing ports and everything else.
+You need to point in lnd.conf to the bitcoin node of whoever wants to use it.
+
+Disk Image Download
+https://1drv.ms/u/s!AuOr1MO73leJi5RRQGfp0slfklo7-Q?e=yYafOs
+
+Use RUFUS to create a bootable Flash Drive
+https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4.exe

@@ -2,10 +2,16 @@ Guys, I made a light version of minibolt here, without bitcoind. Just with the s
 
 Use: User: `admin` Pass: `lightning` to login and then change password using `passwd`
 
+Change your hostname:
+`sudo nano /etc/hostname`
+
 The lnd.conf is complete and commented, for now in tor only, since it is not possible to have two clearnets without changing ports and everything else.
 You need to point in lnd.conf to the bitcoin node of whoever wants to use it.
 
 `sudo nano /data/lnd/lnd.conf`
+
+Change your node alias (name)
+`alias=YOURNODENAME`
 
 Change this part to your bitcoind credentials
 

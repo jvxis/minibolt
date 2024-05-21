@@ -1,3 +1,6 @@
+# Light Minibolt
+## For installations with Bitcoin Core on another machine
+
 Guys, I made a light version of minibolt here, without bitcoind. Just with the setup configurations, tor, i2p, and lnd. In this case, I used LND via git pull and compiled it to ensure the latest available version 0.18.0 rc2.
 
 Use: User: `admin` Pass: `lightning` to login and then change password using `passwd`

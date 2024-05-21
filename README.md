@@ -5,8 +5,8 @@ Use: User: `admin` Pass: `lightning` to login and then change password using `pa
 Change your hostname:
 `sudo nano /etc/hostname`
 
-The lnd.conf is complete and commented, for now in tor only, since it is not possible to have two clearnets without changing ports and everything else.
-You need to point in lnd.conf to the bitcoin node of whoever wants to use it.
+The lnd.conf is complete and commented, for now in tor only, but clearnet configuration is commented.
+You need to point in lnd.conf to your bitcoin core.
 
 `sudo nano /data/lnd/lnd.conf`
 

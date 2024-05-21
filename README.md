@@ -5,7 +5,7 @@ Use: User: admin Pass: lightning to login and then change password using passwd
 The lnd.conf is complete and commented, for now in tor only, since it is not possible to have two clearnets without changing ports and everything else.
 You need to point in lnd.conf to the bitcoin node of whoever wants to use it.
 
-'sudo nano /data/lnd/lnd.conf'
+`sudo nano /data/lnd/lnd.conf`
 
 Change this part to your bitcoind credentials
 

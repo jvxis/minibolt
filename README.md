@@ -42,8 +42,7 @@ It has active services and is right at the point where it asks to create the wal
 So Follow this step to create your wallet
 https://v2.minibolt.info/lightning/lightning/lightning-client#wallet-setup
 
-Disk Image Download
-https://1drv.ms/u/s!AuOr1MO73leJi5RRQGfp0slfklo7-Q?e=yYafOs
+[Disk Image Download](https://1drv.ms/u/s!AuOr1MO73leJi5RS3MFUBo7HP_xutg?e=SExAEJ)
 
 Use RUFUS to create a bootable Flash Drive
 https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4.exe

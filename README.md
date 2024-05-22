@@ -5,7 +5,10 @@ Guys, I made a light version of minibolt here, without bitcoind. Just with the s
 
 [Disk Image Download](https://1drv.ms/u/s!AuOr1MO73leJi5RS3MFUBo7HP_xutg?e=SExAEJ)
 
-Use: User: `admin` Pass: `lightning` to login and then change password using `passwd`
+Use: User: `admin` Pass: `lightning` to login and then change password using 
+```bash
+passwd
+```
 
 Change your hostname:
 ```bash
@@ -35,7 +38,10 @@ Change this part to your bitcoind credentials
 `bitcoind.zmqpubrawtx=tcp://192.168.68.74:28333`
 
 
-Type `journalctl -f -u lnd`
+Type 
+```bash
+journalctl -f -u lnd
+```
 you should see:
 
 May 21 23:09:38 jvx-minibolt-tmp lnd[812]: 2024-05-21 23:09:38.318 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or lncli changepassword` to change the password of an existing wallet and unlock it.

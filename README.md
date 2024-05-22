@@ -8,7 +8,7 @@ Guys, I made a light version of minibolt here, without bitcoind. Just with the s
 Use: User: `admin` Pass: `lightning` to login and then change password using `passwd`
 
 Change your hostname:
-```sudo nano /etc/hostname```
+```bash sudo nano /etc/hostname```
 
 The lnd.conf is complete and commented, for now in tor only, but clearnet configuration is commented.
 You need to point in lnd.conf to your bitcoin core.

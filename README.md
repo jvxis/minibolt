@@ -10,12 +10,13 @@ Use: User: `admin` Pass: `lightning` to login and then change password using `pa
 Change your hostname:
 ```bash
 sudo nano /etc/hostname
+```
 
 The lnd.conf is complete and commented, for now in tor only, but clearnet configuration is commented.
 You need to point in lnd.conf to your bitcoin core.
-
-`sudo nano /data/lnd/lnd.conf`
-
+```bash
+sudo nano /data/lnd/lnd.conf
+```
 Change your node alias (name)
 `alias=YOURNODENAME`
 

@@ -26,7 +26,7 @@
 
 9. Execute:
    ```bash
-   python3 node-status.html
+   python3 node-status.py
    ```
 10. Now you can access `HTTP://your_machine_ip:5000/status`
    

@@ -1,5 +1,5 @@
 # Node Status Install Instructions
-
+`First, be sure that you can execute the commands bitcoin-cli and lncli with your user. If you don't, you need to check GO Path.`
 ## Initial Setup
 1. Dependencies:
    Flask Library
@@ -15,15 +15,18 @@
 6. Open the file node-status.py and fill out with your Bitcoind credentials
 
    BITCOIN_RPC_USER = 'YOUR_BITCOIN_RPCUSER'
+
    BITCOIN_RPC_PASSWORD = 'YOUR_BITCOIN_RPCPASS'
+
    BITCOIN_RPC_HOST = 'YOUR_BITCOIN_MACHINE_IP'
+
    BITCOIN_RPC_PORT = '8332'
 
-7. Save and Exit
+8. Save and Exit
 
-8. Execute:
+9. Execute:
    ```bash
    python3 node-status.html
    ```
-   
+10. Now you can access `HTTP://your_machine_ip:5000/status`
    

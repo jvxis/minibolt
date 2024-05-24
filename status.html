@@ -5,6 +5,11 @@
     <!-- Refresh page every 900 seconds (15 minutes) -->
     <meta http-equiv="refresh" content="900">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Uncomment if you need to implement favicons on your nginx. You need to create a file for this site and a location /static
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}"> -->
     <title>{{ node_alias }} - Status</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -46,8 +51,14 @@
 <div class="container">
     <!-- Display current time -->
     <div id="current-time" class="text-right"></div>
+    <div id="coingekko" class="center"><script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+<coingecko-coin-price-marquee-widget  coin-ids="bitcoin,ethereum,dero" currency="usd" background-color="#333333" locale="pt" font-color="#f2f2f2"></coingecko-coin-price-marquee-widget></div>
     <h1 class="mt-5">{{ node_alias }} - Node Status</h1>
-    <h2 class="mt-4">Bitcoin Core (bitcoind)</h2>
+    <div class="alert alert-info" role="alert">{{ message }}</div>
+    <div class="alert alert-secondary" role="alert">
+        <strong>🚀 Fastest Fee: {{ fee_info.fastestFee }} sat/vB</strong> | 🚗 Half Hour Fee: {{ fee_info.halfHourFee }} sat/vB | 🛵 Hour Fee: {{ fee_info.hourFee }} sat/vB | 🚲 Economy Fee: {{ fee_info.economyFee }} sat/vB | 🐌 Minimum Fee: {{ fee_info.minimumFee }} sat/vB
+    </div>
+    <h2 class="mt-4">Bitcoin Core (bitcoind) - {{ bitcoind.bitcoind }}</h2>
     <ul class="list-group">
         <li class="list-group-item">
             <strong>Sync Percentage:</strong>

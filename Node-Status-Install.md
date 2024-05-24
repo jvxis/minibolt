@@ -1,4 +1,6 @@
 # Node Status Install Instructions
+![image](https://github.com/jvxis/minibolt/assets/108929149/a520ff0c-7de4-4489-9657-413312cb995f)
+
 `First, be sure that you can execute the commands bitcoin-cli and lncli with your user. If you don't, you need to check GO Path.`
 ## Initial Setup
 1. Dependencies:

@@ -1,9 +1,11 @@
 from flask import Flask, render_template
 import subprocess
 import json
+import requests
+
 BITCOIN_RPC_USER = 'YOUR_BITCOIN_RPCUSER'
 BITCOIN_RPC_PASSWORD = 'YOUR_BITCOIN_RPCPASS'
-BITCOIN_RPC_HOST = 'YOUR_BITCOIN_MACHINE_IP' # Use 127.0.0.1 if Bitcoind is running on the same machine of the script instalation
+BITCOIN_RPC_HOST = 'YOUR_BITCOIN_MACHINE_IP' # Use 127.0.0.1 if Bitcoind is running on the same machine of the script installation
 BITCOIN_RPC_PORT = '8332'
 
 
@@ -67,12 +69,25 @@ def get_lnd_info():
         "synced_to_chain": node_data["synced_to_chain"],
         "synced_to_graph": node_data["synced_to_graph"]
     }
+def read_message_from_file():
+    try:
+        with open(MESSAGE_FILE_PATH, 'r') as file:
+            message = file.read().strip()
+        return message
+    except FileNotFoundError:
+        return "No message found."
+
+def get_fee_info():
+    response = requests.get("https://mempool.space/api/v1/fees/recommended")
+    return response.json()
 
 @app.route('/status')
 def status():
     bitcoin_info = get_bitcoin_info()
     lnd_info = get_lnd_info()
-    return render_template('status.html', bitcoind=bitcoin_info, lnd=lnd_info, node_alias=lnd_info["node_alias"])
+    message = read_message_from_file()
+    fee_info = get_fee_info()
+    return render_template('status.html', bitcoind=bitcoin_info, lnd=lnd_info, node_alias=lnd_info["node_alias"], message=message, fee_info=fee_info)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

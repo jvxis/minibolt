@@ -8,15 +8,21 @@
    ```bash
    pip3 install flask
    ```
-3. Get the files node-status.py and status.html
+   Requests Library
+   ```bash
+   pip3 install requests
+   ```
+3. Get the files node-status.py, status.html, and message.txt
 4. Place node-status.py in your user directory `/home/user/`
 5. Make a directory `templates`
    ```bash
    sudo mkdir templates
    ```
-6. Move the file status.html to the directory `/home/user/templates`
+6. Move the files `status.html` and `message.txt` to the directory `/home/user/templates`
 
-7. Open the file node-status.py and fill out with your Bitcoind credentials
+7. Edit the file `message.txt` and write anything you want
+
+8. Open the file `node-status.py` and fill out with your Bitcoind credentials
 
    BITCOIN_RPC_USER = 'YOUR_BITCOIN_RPCUSER'
 
@@ -26,11 +32,11 @@
 
    BITCOIN_RPC_PORT = '8332'
 
-8. Save and Exit
+9. Save and Exit
 
-9. Execute:
+10. Execute:
    ```bash
    python3 node-status.py
    ```
-10. Now you can access `HTTP://your_machine_ip:5000/status`
+11. Now you can access `HTTP://your_machine_ip:5000/status`
    
